@@ -1,0 +1,46 @@
+@import '../variables.scss';
+
+.navigation-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+.navigation-button {
+  height: 50px;
+  width: 100px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: $jetColor;
+  border: 3px solid $colorPapayaWhip;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+ }
+ 
+ .navigation-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $colorPapayaWhip;
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: -1;
+ }
+ 
+ .navigation-button:hover::before {
+  transform: translateX(0);
+ }

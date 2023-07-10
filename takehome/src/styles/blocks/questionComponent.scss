@@ -1,0 +1,89 @@
+@import '../variables.scss';
+
+.question {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  color: $jetColor;
+  text-align: center;
+
+  &-card {
+    width: 380px;
+    margin: 0 auto;
+    padding: 60px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    -webkit-box-shadow:0px 0px 255px 35px rgba(253,240,213,0.44);
+    -moz-box-shadow: 0px 0px 255px 35px rgba(253,240,213,0.44);
+    box-shadow: 0px 0px 255px 35px rgba(253,240,213,0.44);
+  }
+}
+
+.answer {
+  &-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &-option {
+    display: flex;
+    justify-content: space-around;
+
+    &-container {
+      width: 180px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom,$colorRasberry, $colorPapayaWhip);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+    }
+
+    &-input {
+      padding-left: 0;
+      width: 160px;
+      height: 40px;
+      border: none;
+      outline: none;
+      caret-color: $colorRasberry;
+      background-color: rgb(255, 255, 255);
+      padding-left: 15px;
+      letter-spacing: 0.8px;
+      color: rgb(19, 19, 19);
+      font-size: 13.4px;
+    }
+  }
+
+  &-card {
+    height: 80px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background: rgba( 255, 255, 255, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    &:hover {
+      background: rgba( 253, 240, 213, 0.2 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 0px );
+      -webkit-backdrop-filter: blur( 0px );
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+  }
+}
+
